@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="login-container">
+    <h1>Dashboard</h1>
+
+    <!-- Profit Percentage Calculator -->
+    <div class="calculator">
+        <h2>Profit Percentage Calculator</h2>
+        <input type="number" id="profits" placeholder="Enter your profits">
+        <input type="number" id="totalEarned" placeholder="Enter total earned">
+        <button id="calculatePercentage">Calculate Percentage</button>
+        <p id="percentageResult"></p>
+    </div>
+
+    <!-- Profit Per Sale Calculator -->
+    <div class="calculator">
+        <h2>Profit Per Sale Calculator</h2>
+        <input type="number" id="productCost" placeholder="Enter product cost">
+        <input type="number" id="cutPercentage" placeholder="Enter your cut percentage">
+        <button id="calculateProfit">Calculate Profit</button>
+        <p id="profitResult"></p>
+    </div>
+
+    <!-- Extend Text Button -->
+    <button id="extendTextButton">Extend Text</button>
+    <div class="hidden-text" id="extendedText">
+      <p>
+        Sieges Percentage per sale: 10% cut
+      </p>
+    </div>
+</div>
+
+<script>
+    const extendTextButton = document.getElementById("extendTextButton");
+    const extendedText = document.getElementById("extendedText");
+
+    extendTextButton.addEventListener("click", () => {
+        if (extendedText.style.display === "none" || extendedText.style.display === "") {
+            extendedText.style.display = "block";
+        } else {
+            extendedText.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
